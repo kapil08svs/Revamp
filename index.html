@@ -9,6 +9,49 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  <!-- Testimonials Carousel -->
+<link type="text/css" rel="stylesheet" href="dcodes/carousel_hor/css/dc_carousel_hor.css" />
+
+<script type="text/javascript" src="dcodes/jquery.min.js"></script> <!-- (do not call twice) -->
+
+<script type="text/javascript" src="dcodes/carousel_hor/js/jquery.bxslider2.min.js"></script>
+<script type="text/javascript" src="dcodes/carousel_hor/js/dc_jqcarousel.js"></script>
+
+<link type="text/css" rel="stylesheet" href="dcodes/carousel_hor/css/elastislide.css" />
+
+<script type="text/javascript" src="dcodes/carousel_hor/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="dcodes/carousel_hor/js/jquerypp.custom.js"></script> 
+<script type="text/javascript" src="dcodes/carousel_hor/js/jquery.elastislide.js"></script> 
+
+<link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/carousel_hor/css/dc_carousel_hor.css" />
+
+<script type="text/javascript" src="http://cdn.dcodes.net/2/jquery.min.js"></script> 
+
+<script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/jquery.bxslider2.min.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/dc_jqcarousel.js"></script>
+
+<link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/carousel_hor/css/elastislide.css" />
+
+<script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/jquerypp.custom.js"></script> 
+<script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/jquery.elastislide.js"></script> 
+ <script type="text/javascript">
+    $(function(){
+    $('#bxslides1').bxSlider({
+	
+        wrapper_class: 'bxslides1_wrap',
+        margin: 70,
+        auto: true,
+        auto_controls: true
+    });
+});
+</script>
+<style type="text/css">
+
+
+</style>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -28,6 +71,9 @@
       color: #303030;
       font-weight: 400;
       margin-bottom: 30px;
+	   margin-left: 0px;
+    overflow:auto;
+    display:block;
   }
   .video_Img{
       width: 55%;
@@ -39,6 +85,13 @@
       padding: 100px 25px;
       font-family: Montserrat, sans-serif;
   }
+    img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+	
+}
+
   .teamImg{
   width: 100%;
   height: 100%;
@@ -216,6 +269,17 @@
   }
 
   </style>
+  <style type="text/css">
+  #container {
+    margin: 0 auto;
+    text-align: center; /* for IE */
+  }
+
+  #yourdiv {
+    width: 400px;
+    border: 1px solid #000;
+  }
+</style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -234,9 +298,9 @@
         <li><a href="#about">ABOUT US</a></li>
         <li><a href="#services">WHAT WE OFFER</a></li>
         <li><a href="#ourinspiration">OUR INSPIRATION</a></li>
-        <li><a href="#portfolio">OUR FAVORITE QUOTES</a></li>
-        <li><a href="#people">OUR TEAM</a></li>
+        <li><a href="#people">OUR TEAM</a></li>		
         <li><a href="#contact">CONTACT</a></li>
+		
       </ul>
     </div>
   </div>
@@ -252,13 +316,16 @@
   <div class="row">
     <div class="col-sm-12">
       <h2>ABOUT US</h2><br>
+	  <p>
+	  REVAMP is a new-age educational platform established to revamp the mindset and financial IQ of common man by creating awareness about how to achieve financial freedom, correcting the cognitive blueprint and teaching how to leverage time, effort & money. Financial learning is a crucial aspect of education among diverse sector and we at Revamp have embarked upon this endeavor of paramount importance.
+
+	   A person can be highly educated, professionally successful but financially illiterate, alas! Revampers firmly believe “success is not about making money, it’s about making the man who will by default make money.”
+	  </P>
       <h2>Vision</h2>
-      <p>The brand name “REVAMP” is a platform established to influence the financial mind-set of people by creating awareness about how to achieve financial freedom and teach them to leverage Time, Effort and Money.
-The company aims to provide a crucially important aspect of learning i.e. Financial awareness among diverse sectors of people belonging to different industries.</p>
+      <p>"Our Vision is to revamp an individual to achieve financial freedom through heuristic learning & holistic development."</p>
       <br>
       <h2>Mission</h2>
-      <p>The vision of REVAMP can be achieved by creating an ecosystem throughout  the globe which teaches and provides practical exposure on multiple focus areas such as Leadership Development, Entrepreneurship Development, Business Start-up Solutions, Financial Intelligence, Investments, People Management, Personality Development and many more.
-The platform “REVAMP” principally works through partnerships with like-minded individuals, organisations, corporations, and governments.</p>
+      <p>To create a global learning ecosystem that will provide exposure to individuals in various areas like Financial Education, Leadership, Entrepreneurship, People Management, Mindset, and many more that are a imperative to become financially free by working through                partnerships with like-minded individuals, corporations &organizations.</p>
       <br>
     </div>
   </div>
@@ -363,11 +430,8 @@ The platform “REVAMP” principally works through partnerships with like-minde
     </div>
   </div>
 </div>
-
-<!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
   
-  <h2>OUR FAVORITE QUOTES </h2>
+  <center><h2>OUR FAVORITE QUOTES </h2></center>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -458,7 +522,6 @@ The platform “REVAMP” principally works through partnerships with like-minde
     </div>
   </div>
 </div>
-
 
 <div id="googleMap" style="height:400px;width:100%;"></div>
 
