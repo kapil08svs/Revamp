@@ -267,24 +267,40 @@
   #tagline{
     padding-left:10%; 
   }
-
-  </style>
-  <style type="text/css">
   #container {
     margin: 0 auto;
     text-align: center; /* for IE */
   }
-
   #yourdiv {
     width: 400px;
     border: 1px solid #000;
+  }
+  .revamp_logo {
+    padding-left: 20px;
+    font-size: -webkit-xxx-large;
+    display: inline-block;
+    font-weight: bolder;
+    color: #fff;
+    vertical-align: super;
+    margin-top: -1%;
+  }
+  .container {
+    display: inline-block;
+  }
+  @media screen and (max-width: 767px) {
+    .revamp_logo {
+      float: right;
+      margin-right: 3%;
+      margin-top: -3%;
+    }
   }
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+  <div class="revamp_logo col-sm-1"><strong>r</strong></div>
+  <div class="container col-sm-11">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -293,14 +309,13 @@
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li style="width: 10%;"><a href="http://velocity24x7.com/"><img style="width:160%;" src="http://mvtvelocityindia.biz/wp-content/uploads/2016/12/logo.png"></a></li>
+      <ul class="nav navbar-nav">
         <li><a href="#about">ABOUT US</a></li>
         <li><a href="#services">WHAT WE OFFER</a></li>
         <li><a href="#ourinspiration">OUR INSPIRATION</a></li>
-        <li><a href="#people">OUR TEAM</a></li>		
+        <li><a href="#portfolio">OUR FAVORITE QUOTES</a></li>
+        <li><a href="#people">OUR TEAM</a></li>
         <li><a href="#contact">CONTACT</a></li>
-		
       </ul>
     </div>
   </div>
@@ -321,7 +336,7 @@
 
 	   A person can be highly educated, professionally successful but financially illiterate, alas! Revampers firmly believe “success is not about making money, it’s about making the man who will by default make money.”
 	  </P>
-      <h2>Vision</h2>
+      <br><h2>Vision</h2>
       <p>"Our Vision is to revamp an individual to achieve financial freedom through heuristic learning & holistic development."</p>
       <br>
       <h2>Mission</h2>
