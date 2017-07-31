@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <link rel="icon" href="https://rawgit.com/sriker123/Revamp/master/favicon-16x16.png" type="image/gif" sizes="10x10">
     <meta charset="utf-8">
-    <title>Revamp In - Invest in yourself</title>
+    <title>Revamp - Invest in yourself</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -18,6 +19,9 @@
     <!-- End of head section HTML codes -->
     <!-- Testimonials Carousel -->
     <link type="text/css" rel="stylesheet" href="dcodes/carousel_hor/css/dc_carousel_hor.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+ 
     <script type="text/javascript" src="dcodes/jquery.min.js"></script>
     <!-- (do not call twice) -->
     <script type="text/javascript" src="dcodes/carousel_hor/js/jquery.bxslider2.min.js"></script>
@@ -34,8 +38,24 @@
     <script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/modernizr.custom.js"></script>
     <script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/jquerypp.custom.js"></script>
     <script type="text/javascript" src="http://cdn.dcodes.net/2/carousel_hor/js/jquery.elastislide.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function(){
+        $("#testimonial-slider").owlCarousel({
+        items:1,
+        itemsDesktop:[1000,1],
+        itemsDesktopSmall:[979,1],
+        itemsTablet:[768,1],
+        pagination:true,
+        navigation:true,
+        navigationText:["",""],
+        slideSpeed:1000,
+        autoPlay:true
+                    });
+                 });
     </script>
+
     <!-- DC Elastislide Carousel Settings -->
 <style>
 body {
@@ -281,7 +301,7 @@ footer .glyphicon {
     }
 }
 #tagline {
-    padding-left: 13%;
+    padding-left: 10%;
 }
 #container {
     margin: 0 auto;
@@ -310,8 +330,8 @@ footer .glyphicon {
         margin-right: 3%;
     }
     .Events td {
-    	width: 100%;
-    	display: block;
+        width: 100%;
+        display: block;
     }
     .EventImagePopup {
       left: 5%;
@@ -354,21 +374,21 @@ footer .glyphicon {
     display: block;
 }
 .rvmpAREventCenter {
-	height: 100%;
+    height: 100%;
 }
 .Events img {
   cursor: pointer;
 }
 .Events td {
-	height: 100%;
+    height: 100%;
     padding: 20px;
 }
 .rvmpAREventInfo img {
-	height: auto;
+    height: auto;
 }
 .EventImagePopup {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     z-index: 999;
     top: 16%;
     left: 36%;
@@ -387,7 +407,7 @@ footer .glyphicon {
     background: rgba(40, 52, 61, 0.68);
 }
 .EventImagePopupClose, .EventImagePopupCloseText {
-	font-size: 20px;
+    font-size: 20px;
     font-weight: bolder;
     color: darkslategrey;
     position: absolute;
@@ -402,13 +422,133 @@ footer .glyphicon {
     display: none;
 }
 .EventImagePopupClose:hover ~ .EventImagePopupCloseText {
-	display: block;
+    display: block;
+}
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+/*Testimonials*/
+
+.demo{ background: #f8f7f6; }
+#testimonial-slider{
+    padding: 50px 20px 35px 20px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 115px 19px rgba(236, 236, 236, 1);
+}
+.testimonial .description{
+    font-size: 14px;
+    color: #777;
+    line-height: 26px;
+    text-indent: 30px;
+    position: relative;
+}
+.testimonial .description:before{
+    content: "\f10d";
+    font-family: "fontAwesome";
+    position: absolute;
+    top: 0;
+    left: -15px;
+}
+.testimonial .title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #363636;
+    text-transform: capitalize;
+    margin: 0;
+}
+.testimonial .post{
+    display: block;
+    font-size: 15px;
+    color: #363636;
+}
+.owl-buttons{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+}
+.owl-prev,
+.owl-next{
+    position: absolute;
+    left: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+.owl-next{
+    left: auto;
+    right: 0;
+}
+.owl-buttons .owl-prev:before,
+.owl-buttons .owl-next:before{
+    content: "\f104";
+    font-family: "fontAwesome";
+    font-size: 60px;
+    font-weight: 900;
+    color: #cacaca;
+    line-height: 20px;
+    opacity: 0.8;
+}
+.owl-buttons .owl-next:before{
+    content: "\f105";
+}
+.owl-buttons .owl-prev:hover:before,
+.owl-buttons .owl-next:hover:before{
+    opacity: 1;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    background: transparent;
+}
+.owl-theme .owl-controls{
+    margin-top: 40px;
+}
+.owl-theme .owl-controls .owl-page span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    background: url("https://rawgit.com/sriker123/Revamp/master/IMG_20170315_184441_884.jpg") no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in-out 0s;
+}
+.owl-theme .owl-controls .owl-page:nth-child(2) span{
+    background: url("../images/img-2.jpg") no-repeat;
+    background-size: cover;
+}
+.owl-theme .owl-controls .owl-page:nth-child(3) span{
+    background: url("../images/img-3.jpg") no-repeat;
+    background-size: cover;
+}
+.owl-theme .owl-controls .owl-page:nth-child(4) span{
+    background: url("https://rawgit.com/sriker123/Revamp/master/IMG_3841.JPG") no-repeat;
+    background-size: cover;
+}
+.owl-theme .owl-controls .owl-page:nth-child(5) span{
+    background: url("https://rawgit.com/sriker123/Revamp/master/IMG_20170324_112500.jpg") no-repeat;
+    background-size: cover;
+}
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    opacity: 0.5;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page.active:hover span{
+    border-color: #d133ff;
+    opacity: 1;
+}
+@media only screen and (max-width: 479px){
+    .owl-buttons{ bottom: 30%; }
 }
 </style>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-	<div class="mask"></div>
+    <div class="mask"></div>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="revamp_logo col-sm-1">
             <strong>r</strong>
@@ -425,7 +565,8 @@ footer .glyphicon {
                     <li><a href="#services">WHAT WE OFFER</a></li>
                     <li><a href="#ourinspiration">OUR INSPIRATION</a></li>
                     <li><a href="#Events">EVENTS</a></li>
-                    <!-- 	<li><a href="#people">OUR TEAM</a></li> -->
+                    <!-- <li><a href="#Testimonials">TESTIMONIALS</a></li> -->
+                    <li><a href="#Careers">CAREERS</a></li> 
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -443,13 +584,13 @@ footer .glyphicon {
                 <br>
                 <h2>ABOUT US</h2>
                 <br>
-                <p>REVAMP IN is a new-age educational platform established to revamp the mindset and financial IQ of common man by creating awareness about how to achieve financial freedom, correcting the cognitive blueprint and teaching how to leverage time, effort & money. Financial learning is a crucial aspect of education among diverse sector and we at Revamp In have embarked upon this endeavor of paramount importance. A person can be highly educated, professionally successful but financially illiterate, alas! Revampers firmly believe “success is not about making money, it’s about making the man who will by default make money.”</P>
+                <p>REVAMP is a new-age educational platform established to revamp the mindset and financial IQ of common man by creating awareness about how to achieve financial freedom, correcting the cognitive blueprint and teaching how to leverage time, effort & money. Financial learning is a crucial aspect of education among diverse sector and we at Revamp have embarked upon this endeavor of paramount importance. A person can be highly educated, professionally successful but financially illiterate, alas! Revampers firmly believe “success is not about making money, it’s about making the man who will by default make money.”</P>
                 <br>
                 <h2>Vision</h2>
                 <p>"Our Vision is to revamp an individual to achieve financial freedom through heuristic learning & holistic development."</p>
                 <br>
                 <h2>Mission</h2>
-                <p>To create a global learning ecosystem that will provide exposure to individuals in various areas like Financial Education, Leadership, Entrepreneurship, People Management, Mindset, and many more that are a imperative to become financially free by working through partnerships with like-minded individuals, corporations &organizations.
+                <p>To create a global learning ecosystem that will provide exposure to individuals in various areas like Financial Education, Leadership, Entrepreneurship, People Management, Mindset, and many more that are a imperative to become financially free by working through partnerships with like-minded individuals, corporations & organizations.
                 </p>
                 <br><br>
             </div>
@@ -562,16 +703,16 @@ footer .glyphicon {
                 <h5>Do we know what we want to acheive in Life ?</h5>
                 <h5>Do we have a PATH for getting what we want ?</h5>
                 <h5>Is this Life meant to work 9-5 for someone else or to LIVE
-					LIFE on our own terms?</h5>
+                    LIFE on our own terms?</h5>
                 <h5>How can we get onto the PATH of SUCCESS and get what we
-					want ?</h5>
+                    want ?</h5>
             </div>
         </div>
     </div>
     <h2>
     <br/><br/>
-		<center>OUR FAVORITE QUOTES</center>
-	</h2>
+        <center>OUR FAVORITE QUOTES</center>
+    </h2>
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -583,64 +724,64 @@ footer .glyphicon {
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <h4>
-					"The Way Get Started Is To Quit Talking And Begin Doing."<br>
-					<span style="font-style: normal;">-Walt Disney</span>
-				</h4>
+                    "The Way Get Started Is To Quit Talking And Begin Doing."<br>
+                    <span style="font-style: normal;">-Walt Disney</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"It’s Not Whether You Get Knocked Down, It’s Whether You Get Up."<br>
-					<span style="font-style: normal;">Vince Lombardi</span>
-				</h4>
+                    "It’s Not Whether You Get Knocked Down, It’s Whether You Get Up."<br>
+                    <span style="font-style: normal;">Vince Lombardi</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"People Who Are Crazy Enough To Think They Can Change The World,
-					Are The Ones Who Do."<br> <span style="font-style: normal;">Rob
-						Siltanen</span>
-				</h4>
+                    "People Who Are Crazy Enough To Think They Can Change The World,
+                    Are The Ones Who Do."<br> <span style="font-style: normal;">Rob
+                        Siltanen</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We
-					Must Do."<br> <span style="font-style: normal;">Johann
-						Wolfgang Von Goethe</span>
-				</h4>
+                    "Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We
+                    Must Do."<br> <span style="font-style: normal;">Johann
+                        Wolfgang Von Goethe</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"Fake It Until You Make It! Act As If You Had All The Confidence
-					You Require Until It Becomes Your Reality."<br> <span
-						style="font-style: normal;">Brian Tracy</span>
-				</h4>
+                    "Fake It Until You Make It! Act As If You Had All The Confidence
+                    You Require Until It Becomes Your Reality."<br> <span
+                        style="font-style: normal;">Brian Tracy</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"Time is more valuable than money. You can get more money, but you
-					cannot get more time."<br> <span style="font-style: normal;">Jim
-						Rohn</span>
-				</h4>
+                    "Time is more valuable than money. You can get more money, but you
+                    cannot get more time."<br> <span style="font-style: normal;">Jim
+                        Rohn</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"You miss 100% of the shots you don’t take."<br> <span
-						style="font-style: normal;">Wayne Gretzky</span>
-				</h4>
+                    "You miss 100% of the shots you don’t take."<br> <span
+                        style="font-style: normal;">Wayne Gretzky</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"The size of your success is measured by the strength of your
-					desire; the size of your dream; and how you handle disappointment
-					along the way."<br> <span style="font-style: normal;">Robert
-						Kiyosaki</span>
-				</h4>
+                    "The size of your success is measured by the strength of your
+                    desire; the size of your dream; and how you handle disappointment
+                    along the way."<br> <span style="font-style: normal;">Robert
+                        Kiyosaki</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>
-					"If somebody offers you an amazing opportunity but you are not sure
-					you can do it, say yes – then learn how to do it later!"<br> <span
-						style="font-style: normal;">Richard Branson</span>
-				</h4>
+                    "If somebody offers you an amazing opportunity but you are not sure
+                    you can do it, say yes – then learn how to do it later!"<br> <span
+                        style="font-style: normal;">Richard Branson</span>
+                </h4>
             </div>
         </div>
         <!-- Left and right controls -->
@@ -654,68 +795,68 @@ footer .glyphicon {
         <br>
         <br>
         <div class="Events">
-	        <h2 class="text-center">Events</h2>
-	        <center>
-	            <!-- <strong><b class="subHeading">Upcoming Events</b></strong>
-            	<div class="UPEventsDiv">
-            		<table>
-				        <tr>
-        					<td>
-					            <center class="rvmpAREventCenter">
-					                <p align="justify" class="text-center">Stock Market Trading</p>
-					                <div class="rvmpUPEventInfo">
-					                	<img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
-					                	<p>June 10th and 11th, 2017</p>
-					                	<a href="https://goo.gl/NhUu4p">Click Here to know more !!!</a>
-					            	</div>
-					            </center>
-        					</td>
-        				</tr>
-    				</table>
-				</div> -->
-			</center>
-	        <br>
-	        <center>
-	            <strong><b class="subHeading">Archived Events</strong></b>
-		        <div class="ArchEventsDiv">
-			        <table>
-				        <tr>
-					        <td>
-					       		<center class="rvmpAREventCenter">
-					                <p align="justify" class="text-center">Leadership Development Program</p>
-					                <div class="rvmpAREventInfo">
-					                	<img align="center" class="thumbnail" src="Revamp's First session @setju.jpg">
-					                	<p>Nov 2015, @IIAEM, SETJU</p>
-					            	</div>
-					            </center>
-				            </td>
-				            <td>
-					       		<center class="rvmpAREventCenter">
-					                <p align="justify" class="text-center">Learn To Earn WorkShop</p>
-					                <div class="rvmpAREventInfo">
-					                	<img align="center" class="thumbnail" src="REVAMP- LEARN TO EARN WORKSHOP- POSTER.jpg">
-					                	<p>March 2017, @IIAEM, SETJU</p>
-					            	</div>
-					            </center>
-				            </td>
-				            <td>
-					       		<center class="rvmpAREventCenter">
-					                <p align="justify" class="text-center">Bulls & Bears - Stock Market Trading Competition</p>
-					                <div class="rvmpAREventInfo">
-					                	<img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/BnB%20copy.jpg">
-					                	<p>April 2017, @SETJU</p>
-					            	</div>
-					            </center>
-				            </td>
-				            <td>
-					       		<center class="rvmpAREventCenter">
-					                <p align="justify" class="text-center">Advanced Stock Market Trading</p>
-					                <div class="rvmpAREventInfo">
-					                	<img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
-					                	<p>May 20th to 22nd, 2017</p>
-					            	</div>
-					            </center>
-				            </td>
+            <h2 class="text-center">Events</h2>
+            <center>
+                <!-- <strong><b class="subHeading">Upcoming Events</b></strong>
+                <div class="UPEventsDiv">
+                    <table>
+                        <tr>
+                            <td>
+                                <center class="rvmpAREventCenter">
+                                    <p align="justify" class="text-center">Stock Market Trading</p>
+                                    <div class="rvmpUPEventInfo">
+                                        <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
+                                        <p>June 10th and 11th, 2017</p>
+                                        <a href="https://goo.gl/NhUu4p">Click Here to know more !!!</a>
+                                    </div>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div> -->
+            </center>
+            <br>
+             <center>
+                <strong><b class="subHeading">Archived Events</strong></b>
+                <div class="ArchEventsDiv">
+                    <table>
+                        <tr>
+                            <td>
+                                <center class="rvmpAREventCenter">
+                                    <p align="justify" class="text-center">Leadership Development Program</p>
+                                    <div class="rvmpAREventInfo">
+                                        <img align="center" class="thumbnail" src="Revamp's First session @setju.jpg">
+                                        <p>Nov 2015, @IIAEM, SETJU</p>
+                                    </div>
+                                </center>
+                            </td>
+                            <td>
+                                <center class="rvmpAREventCenter">
+                                    <p align="justify" class="text-center">Learn To Earn WorkShop</p>
+                                    <div class="rvmpAREventInfo">
+                                        <img align="center" class="thumbnail" src="REVAMP- LEARN TO EARN WORKSHOP- POSTER.jpg">
+                                        <p>March 2017, @IIAEM, SETJU</p>
+                                    </div>
+                                </center>
+                            </td>
+                            <td>
+                                <center class="rvmpAREventCenter">
+                                    <p align="justify" class="text-center">Bulls & Bears - Stock Market Trading Competition</p>
+                                    <div class="rvmpAREventInfo">
+                                        <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/BnB%20copy.jpg">
+                                        <p>April 2017, @SETJU</p>
+                                    </div>
+                                </center>
+                            </td>
+                            <td>
+                                <center class="rvmpAREventCenter">
+                                    <p align="justify" class="text-center">Advanced Stock Market Trading</p>
+                                    <div class="rvmpAREventInfo">
+                                        <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
+                                        <p>May 20th to 22nd, 2017</p>
+                                    </div>
+                                </center>
+                            </td>
                             <td>
                                 <center class="rvmpAREventCenter">
                                     <p align="justify" class="text-center">Stock Market Trading</p>
@@ -726,66 +867,162 @@ footer .glyphicon {
                                     </div>
                                 </center>                       
                             </td>
-			            </tr>
-		            </table>
-			        <!-- <p align="justify" class="text-center">Leadership Development Program&nbsp Nov 2015, @IIAEM, SETJU</p>
-			        <p align="justify" class="text-center">Learn To Earn WorkShop &nbsp March 2017, @IIAEM, SETJU</p>
-			        <p align="justify" class="text-center">Bulls & Bears &nbsp April 2017, @SETJU</p>
-			        <center>
-			            <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/BnB%20copy.jpg">
-			        </center>
-			        <p align="justify" class="text-center">Advanced Stock Market Trading - May 2017</p>
-			        <center>
-						<img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
-			        </center> -->
-		        </div>
-	        </center>
+                        </tr>
+                    </table>
+                    <!-- <p align="justify" class="text-center">Leadership Development Program&nbsp Nov 2015, @IIAEM, SETJU</p>
+                    <p align="justify" class="text-center">Learn To Earn WorkShop &nbsp March 2017, @IIAEM, SETJU</p>
+                    <p align="justify" class="text-center">Bulls & Bears &nbsp April 2017, @SETJU</p>
+                    <center>
+                        <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/BnB%20copy.jpg">
+                    </center>
+                    <p align="justify" class="text-center">Advanced Stock Market Trading - May 2017</p>
+                    <center>
+                        <img align="center" class="thumbnail" src="https://rawgit.com/sriker123/Revamp/master/AdvanceStockMarketTrading.jpeg">
+                    </center> -->
+                </div>
+            </center>
         </div>
     </div>
     <!-- Container (Pricing Section) -->
-    <!-- 	<div id="people" style="text-align: center;">
-		<h2 class="text-center">OUR TEAM</h2>
-		<h3></h3>
-		<div class="row">
-			<div class="col-xs-12 col-md-2 col-md-offset-1 col-sm-3">
-				<img class="teamImg"
-					src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_adithya.png"><br>
-				<h3>Adithya Sai Kilambi</h3>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-2 col-sm-3">
-				<img class="teamImg"
-					src="https://rawgit.com/sriker123/Revamp/master/Akash(Updated).png"><br>
-				<h3>Akash Gachinmani</h3>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-2 col-sm-3">
-				<img class="teamImg"
-					src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_kapil.png">
-				<h3>Kapil S V S</h3>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-2 col-sm-3">
-				<img class="teamImg"
-					src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_shashank.png"><br>
-				<h3>Shashank Kanuganti</h3>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-2 col-sm-3">
-				<img class="teamImg"
-					src="https://rawgit.com/sriker123/Revamp/master/vam%20pic%20edit.jpg"><br>
-				<h3>Vamshi Krishna</h3>
-				<br>
-			</div>
+    <!--    <div id="people" style="text-align: center;">
+        <h2 class="text-center">OUR TEAM</h2>
+        <h3></h3>
+        <div class="row">
+            <div class="col-xs-12 col-md-2 col-md-offset-1 col-sm-3">
+                <img class="teamImg"
+                    src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_adithya.png"><br>
+                <h3>Adithya Sai Kilambi</h3>
+                <br>
+            </div>
+            <div class="col-xs-12 col-md-2 col-sm-3">
+                <img class="teamImg"
+                    src="https://rawgit.com/sriker123/Revamp/master/Akash(Updated).png"><br>
+                <h3>Akash Gachinmani</h3>
+                <br>
+            </div>
+            <div class="col-xs-12 col-md-2 col-sm-3">
+                <img class="teamImg"
+                    src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_kapil.png">
+                <h3>Kapil S V S</h3>
+                <br>
+            </div>
+            <div class="col-xs-12 col-md-2 col-sm-3">
+                <img class="teamImg"
+                    src="https://raw.githubusercontent.com/kapil08svs/Revamp/master/rsz_shashank.png"><br>
+                <h3>Shashank Kanuganti</h3>
+                <br>
+            </div>
+            <div class="col-xs-12 col-md-2 col-sm-3">
+                <img class="teamImg"
+                    src="https://rawgit.com/sriker123/Revamp/master/vam%20pic%20edit.jpg"><br>
+                <h3>Vamshi Krishna</h3>
+                <br>
+            </div>
 
-		</div>
-	</div> -->
+        </div>
+    </div> -->
     <!-- Container (Contact Section) -->
+
     <div class="EventImagePopup">
-    	<img src="" style="display: inline-block;">
-    	<span class="EventImagePopupClose">X</span>
-    	<span class="EventImagePopupCloseText">Close</span>
+        <img src="" style="display: inline-block;">
+        <span class="EventImagePopupClose">X</span>
+        <span class="EventImagePopupCloseText">Close</span>
     </div>
+
+    <!-- Testimonials -->
+<!-- 
+    <div id="Testimonials" style="text-align: center;">
+        <br>
+        <br>
+            <h2>TESTIMONIALS</h2>
+            <br>
+    <div class="demo">
+       <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 ">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <p class="description">
+                           "Everyone has something best in you but get the best of you into action you must be revamped"
+                        </p>
+                        <h3 class="title">RAVI</h3>
+                        <span class="post">Engineer(C.S.E)</span>
+                    </div>
+ 
+                    <div class="testimonial">
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie, justo nec convallis sollicitudin, sapien lorem dictum lacus, non consequat odio ipsum nec est. Sed mattis egestas elementum. Nulla facilisi. Quisque placerat risus ac nunc ornare tincidunt. Sed quis faucibus nunc. Pellentesque accumsan arcu mi, eget venenatis mauris.
+                        </p>
+                        <h3 class="title">APOORVA</h3>
+                        <span class="post">Engineer (AeroSpace)</span>
+                    </div>
+ 
+                    <div class="testimonial">
+                        <p class="description">
+                            "If you want to take charge of your life, then revamp is what you needed. This is something very good that has happened to me"
+                        </p>
+                        <h3 class="title">THEJUS</h3>
+                        <span class="post">Product Development Engineer (MECH)</span>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="description">
+                            "It's a change in my life, learnt a lot things like how to communicate with people,how to understand business growing in market and still I'm ready to learn from leaders like our organization has.One thing I can say, if you are scared to attempt for doing something strongly then you can't witness success in life, fail fast and get closer to success and achieve it"
+                        </p>
+                        <h3 class="title">ABHINAV</h3>
+                        <span class="post">Employee @ CTS</span>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="description">
+                            "That feeling when you get to know the whole life you lived is a lie and then what should we focus on? Here I thank revamp for helping me to realise on what I should actually work on besides helping me to lay foundation to be financially independent "
+                        </p>
+                        <h3 class="title">SRIKER</h3>
+                        <span class="post">Web Developer</span>
+                    </div>
+
+                      <div class="testimonial">
+                        <p class="description">
+                            "REVAMP is a platform which made my dream achievable by creating a proper mindset in me and it is a platform where it helped me make an effort to achieve my goals.....Thank you REVAMP IN "
+                        </p>
+                        <h3 class="title">NAVYA</h3>
+                        <span class="post">BusinessWomen/Entrepreneur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> -->
+
+    <!-- Careers -->
+
+    <div id = "Careers" style="text-align: center;" class="container-fluid bg-grey containerCareers" >
+        <br>
+        <br>
+            <h2 class="text-center">CAREERS</h2>
+            <br>
+                 <h4>
+                   "Choose a job you love and you will never have to work a day in your life"<br> <span
+                        style="font-style: normal;"></span>
+                </h4>
+            <h4>"Look at our job roles"</h4>
+             
+        <div  id="demo" class="collapse">
+                 <h1>Technical</h1>
+                <p>Web Developer</p>
+                <p>IOS and Android Developer</p> <br>
+                <h1>Non-Technical</h1>
+                <p>Marketing Associate</p>
+                <p>Business Development Associate</p>
+         </div>  
+          <button type="button" data-toggle="collapse" data-target="#demo"><span class="chevron_toggleable glyphicon glyphicon-chevron-down"></span></button><br>
+           
+ 
+        
+    </div>
+
+ <!-- Contact -->
     <div id="contact" style="text-align: center;">
         <br>
         <br>
@@ -854,13 +1091,13 @@ footer .glyphicon {
                     } // End if
                 });
             $('body .Events').on('click','img',function(){
-            	$(".EventImagePopup").show();
-            	$(".mask").show();
-            	$(".EventImagePopup img").attr("src",$(this).attr("src"));
+                $(".EventImagePopup").show();
+                $(".mask").show();
+                $(".EventImagePopup img").attr("src",$(this).attr("src"));
             });
             $('body').on('click','.EventImagePopupClose',function(){
-            	$(".EventImagePopup").hide();
-            	$(".mask").hide();
+                $(".EventImagePopup").hide();
+                $(".mask").hide();
             });
             $(window).scroll(function() {
                 $(".slideanim").each(function() {
